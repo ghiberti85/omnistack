@@ -1,13 +1,14 @@
 const express = require('express');
 const routes = require('./routes'); //importando rotas do arquivo routes
 const app = express();
-
+const { errors } = require('celebrate');
 const cors = require('cors');
 
 app.use(cors());
 app.use(express.json()); //converter json em objeto js
 
 app.use(routes);
+app.use(errors());
 
 // Rota conjunto completo(url), recurso o que vem após a barra -> Rota / Recurso
 /**
@@ -20,7 +21,7 @@ app.use(routes);
   * Tipos de parametros:
   * Query params: parametros enviados na rota(parametros nomeadoas) após "?", usado para filtros,paginação... /users?nome=marcel
   * Route params: parametros usados para  identificar recursos /users/id
-  * 
+  *
   * Request Body:  Criar ou alterar recursos
   */
 
@@ -28,4 +29,4 @@ app.use(routes);
    * Query builder: table('tal').selecet('*').where();
    */
 
-app.listen(3333);
+module.exports = app;

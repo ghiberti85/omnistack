@@ -1,5 +1,5 @@
 const connection = require('../database/connection');
-const crypto = require('crypto');
+const generateUniqueId = require('../utils/generateUniqueId');
 
 module.exports = {
     async index(req,res){
@@ -13,7 +13,7 @@ module.exports = {
         //const params = req.query; Exemplo de Query params
         //const params = req.params; Exemplo de Route params
         const {name, email, whatsapp, city, uf} = req.body;
-        const id = crypto.randomBytes(4).toString('HEX');
+        const id = generateUniqueId();
 
         await connection('ONGS').insert({id, name, email, whatsapp, city, uf,});
         return res.json({ id });
