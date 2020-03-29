@@ -10,6 +10,7 @@ app.use(express.json()); //converter json em objeto js
 app.use(routes);
 app.use(errors());
 
+
 // Rota conjunto completo(url), recurso o que vem após a barra -> Rota / Recurso
 /**
  * Metodos Http
