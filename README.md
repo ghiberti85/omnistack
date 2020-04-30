@@ -53,4 +53,4 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para
 
 ---
 
-Feito com ♥ by Rocketseat | Adaptado com ♥ by @ghiberti85
+Feito com ♥ by @ghiberti85 | Inspired 🚀 by Rocketseat
